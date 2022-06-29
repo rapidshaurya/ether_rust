@@ -11,22 +11,3 @@ tokio = { version = "1", features = ["full"] }
 serde_json="1.0.24"
 eyre = "0.6.8"
 ethers-contract = "0.13.0"
-[[examples]]
-name = "watch"
-path = "examples/transaction.rs"
-
-[[examples]]
-name = "check_balance"
-path = "examples/check_balance.rs"
-
-[[examples]]
-name = "uniswapv2"
-path = "examples/uniswapv2.rs"
-
-[[examples]]
-name = "contract_read"
-path = "examples/contract_read.rs"
-
-[[examples]]
-name = "contract_write"
-path = "examples/contract_write.rs"
