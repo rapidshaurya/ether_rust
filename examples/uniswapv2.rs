@@ -1,3 +1,6 @@
+/*
+ In this example, I am using the IUniswapV2Pair contract to get the current ETH/USDT price.
+*/
 use ethers::prelude::*;
 use eyre::Result;
 use std::sync::Arc;
@@ -14,7 +17,7 @@ abigen!(
 #[tokio::main]
 async fn main() -> Result<()> {
     let client = Provider::<Http>::try_from(
-        "https://mainnet.infura.io/v3/c60b0bb42f8a4c6481ecd229eddaca27",
+        "https://mainnet.infura.io/v3/a111fcada47746d990e0e2b7df50d00a",
     )?;
     let client = Arc::new(client);
 
@@ -25,8 +28,8 @@ async fn main() -> Result<()> {
     // getReserves -> get_reserves
     let (reserve0, reserve1, _timestamp) = pair.get_reserves().call().await?;
     println!("Reserves (ETH, USDT): ({}, {})", reserve0, reserve1);
-
-    let mid_price = f64::powi(10.0, 18 - 6) * reserve1 as f64 / reserve0 as f64;
-    println!("ETH/USDT price: {:.2}", mid_price);
+    //using f64::powi() to set decimal place for getting appropriate result
+    let result = f64::powi(10.0, 18 - 6) * reserve1 as f64 / reserve0 as f64;
+    println!("ETH/USDT price: {:.2}", result);
     Ok(())
 }

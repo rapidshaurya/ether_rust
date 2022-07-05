@@ -2,9 +2,9 @@ use ethers::prelude::*;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>>{
-    
+    //here use your infura url
     let provider = Provider::<Http>::try_from(
-        "https://kovan.infura.io/v3/6b7326134b194ca18b106fdc8bc8fb1a"
+        "https://kovan.infura.io/v3/a111fcada47746d990e0e2b7df50d00a"
     ).expect("could not instantiate HTTP Provider");
     
 

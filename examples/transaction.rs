@@ -9,8 +9,8 @@ async fn main() -> Result<()> {
     ).expect("could not instantiate HTTP Provider");
 
     // storing sender account address in from variable and receiver account address in to variable
-    let from = "0x39A08652FFE1312fAAC563074bc5db745f71eF4e".parse::<Address>()?;
-    let to = "0x3F50A27228457396ABF5b18D08C220b030214a67".parse::<Address>()?;
+    let from = "0xdD3954F7b5fd7ee79512486518d3A027bb6CC0d4".parse::<Address>()?;
+    let to = "0x0ccBD1739c1CFF6CBE9a41342aCbCFD2afb2BB75".parse::<Address>()?;
 
     let val: i128=1000000000000000000; // 1 ether = 1000000000000000000 wei
     // craft the tx
@@ -23,7 +23,9 @@ async fn main() -> Result<()> {
 
     // broadcast it via the eth_sendTransaction API
     let tx = provider.send_transaction(tx, None).await?.await?;
-
+    //if you are using testnet instead of ganache or anvil then you have to add private key to wallet
+    // for wallet you can go to uniswapv2_tx example
+    // one thing more, you have to add    ethers={version ="0.13.0", features = ["legacy"]} in ethers dependencies
     println!("{}", serde_json::to_string(&tx)?);
 
     let nonce2 = provider.get_transaction_count(from, None).await?;
