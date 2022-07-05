@@ -8,8 +8,8 @@ Enter in terminal :
 - cargo run --example uniswapv2 (this example will help you with uniswapV2)
 - cargo run --example uniswapv2_tx (This example will show you how to swap the WETH token with the DAI token)
 ## Links
-[ethers-rs github link](https://github.com/gakonst/ethers-rs)
-[Ganache link](https://trufflesuite.com/ganache/)
-[Remix IDE link](https://remix.ethereum.org/)
-[Infura for creating your infura mainnet url](https://infura.io/)
-[Metamask for creating wallet](https://metamask.io/)
+- [ethers-rs github link](https://github.com/gakonst/ethers-rs)
+- [Ganache link](https://trufflesuite.com/ganache/)
+- [Remix IDE link](https://remix.ethereum.org/)
+- [Infura for creating your infura mainnet url](https://infura.io/)
+- [Metamask for creating wallet](https://metamask.io/)
