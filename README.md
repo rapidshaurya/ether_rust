@@ -13,6 +13,7 @@ Enter in terminal :
 - [Remix IDE link](https://remix.ethereum.org/)
 - [Infura for creating your infura mainnet url](https://infura.io/)
 - [Metamask for creating wallet](https://metamask.io/)
+- [uniswapV2 swapExactEthForTokens](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02#swapexactethfortokens)
 ### Note
 - For running my uniswapv2_tx example, you should use your wallet private key and infura url for making a successful transaction
 - To make a successful transaction to testnetwork, add the dependencies "ethers={version ="0.13.0", features = ["legacy"]}" to cargo.toml.
