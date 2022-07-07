@@ -87,7 +87,6 @@ async fn main() -> Result<()> {
         println!("Enter the amount of WETH you want to swap: ");
         io::stdin().read_line(&mut val).expect("failed to readline");
         let val= f64::powi(10.0, 18) *((val.trim()).parse::<f64>().unwrap());
-        println!("amount of eth: {}",val);
         //converting float to U256
         let amount_out_min=u256_from_f64_saturating(mid_price);
 
